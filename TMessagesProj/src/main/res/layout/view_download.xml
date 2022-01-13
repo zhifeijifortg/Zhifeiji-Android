@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_wifi_speed"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:background="#F7F7F7"
+        android:drawableLeft="@drawable/icon_wifi"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:textColor="#25BD45"
+        android:textSize="14sp"
+        tools:text="10M/s"></TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/video_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

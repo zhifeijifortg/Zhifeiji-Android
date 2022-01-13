@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="4dp"
+    tools:background="@color/wallet_highlighted_text_holo_dark">
+
+    <ImageView
+        android:id="@+id/iv_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_download_tip"></ImageView>
+
+    <TextView
+        android:id="@+id/tv_download_num"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginLeft="-5dp"
+        android:background="@drawable/ic_round_white"
+        android:gravity="center"
+        android:textColor="#4D7EA8"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        tools:text="300"></TextView>
+
+</LinearLayout>

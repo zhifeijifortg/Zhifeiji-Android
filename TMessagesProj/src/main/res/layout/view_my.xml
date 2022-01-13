@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F1F1"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#4D7EA8"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:src="@drawable/calls_back"
+            android:visibility="gone"></ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/title_my"
+            android:textColor="#ffffff"
+            android:textSize="20dp"></TextView>
+
+
+        <TextView
+            android:id="@+id/tv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:text="@string/ac_down_edit"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:visibility="invisible"></TextView>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="60dp"
+        android:src="@mipmap/ic_launcher_round"></ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/AppName"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="次元联动"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:visibility="gone"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Videogram v1.0"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:visibility="gone"></TextView>
+
+    <TextView
+        android:id="@+id/tv_contact_us"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="#ffffff"
+        android:drawableLeft="@drawable/ic_item_contact_us"
+        android:drawablePadding="26dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="@string/vw_my_item_contact_us"
+        android:textColor="#000000"
+        android:textSize="15sp"></TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5px"
+        android:layout_marginLeft="20dp"
+        android:background="#E8E8E8"></View>
+
+    <TextView
+        android:id="@+id/tv_follow"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        android:drawableLeft="@drawable/ic_item_channel"
+        android:drawablePadding="26dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="@string/vw_my_item_channel"
+        android:textColor="#000000"
+        android:textSize="15sp"></TextView>
+
+
+    <TextView
+        android:id="@+id/tv_feeback"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="#ffffff"
+        android:drawableLeft="@drawable/ic_item_qa"
+        android:drawablePadding="26dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="@string/vw_my_item_qa"
+        android:textColor="#000000"
+        android:textSize="15sp"></TextView>
+
+    <TextView
+        android:id="@+id/tv_static"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="#ffffff"
+        android:drawableLeft="@drawable/ic_item_qa"
+        android:drawablePadding="26dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="统计"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:visibility="gone"></TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"></View>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#000000"
+        android:visibility="gone"></View>
+
+</LinearLayout>

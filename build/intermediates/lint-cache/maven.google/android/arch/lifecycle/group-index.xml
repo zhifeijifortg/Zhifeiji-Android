@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<android.arch.lifecycle>
+  <compiler versions="1.0.0-alpha1,1.0.0-alpha2,1.0.0-alpha3,1.0.0-alpha4,1.0.0-alpha5,1.0.0-alpha6,1.0.0-alpha7,1.0.0-alpha8,1.0.0-alpha9,1.0.0-alpha9-1,1.0.0-beta1,1.0.0-beta2,1.0.0-rc1,1.0.0,1.1.0,1.1.1"/>
+  <runtime versions="1.0.0-alpha1,1.0.0-alpha2,1.0.0-alpha3,1.0.0-alpha4,1.0.0-alpha5,1.0.0-alpha6,1.0.0-alpha7,1.0.0-alpha8,1.0.0-alpha9,1.0.0,1.0.3,1.1.0,1.1.1"/>
+  <extensions versions="1.0.0-alpha1,1.0.0-alpha2,1.0.0-alpha3,1.0.0-alpha4,1.0.0-alpha5,1.0.0-alpha6,1.0.0-alpha7,1.0.0-alpha8,1.0.0-alpha9,1.0.0-alpha9-1,1.0.0-beta1,1.0.0-beta2,1.0.0-rc1,1.0.0,1.1.0,1.1.1"/>
+  <reactivestreams versions="1.0.0-alpha1,1.0.0-alpha2,1.0.0-alpha3,1.0.0-alpha4,1.0.0-alpha5,1.0.0-alpha6,1.0.0-alpha7,1.0.0-alpha8,1.0.0-alpha9,1.0.0-alpha9-1,1.0.0-beta1,1.0.0-beta2,1.0.0-rc1,1.0.0,1.1.0,1.1.1"/>
+  <common versions="1.0.0-alpha1,1.0.0-alpha2,1.0.0-alpha3,1.0.0-alpha4,1.0.0-alpha5,1.0.0-alpha6,1.0.0-alpha7,1.0.0-alpha8,1.0.0-alpha9,1.0.0,1.0.1,1.0.2,1.0.3,1.1.0,1.1.1"/>
+  <common-java8 versions="1.0.0-beta1,1.0.0-beta2,1.0.0-rc1,1.0.0,1.1.0,1.1.1"/>
+  <viewmodel versions="1.1.0,1.1.1"/>
+  <livedata-core versions="1.1.0,1.1.1"/>
+  <livedata versions="1.1.0,1.1.1"/>
+</android.arch.lifecycle>

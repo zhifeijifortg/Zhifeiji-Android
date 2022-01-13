@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "000000000",
+    "project_id": "tmsg-c82d0",
+    "storage_bucket": "tmsg-c82d0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708284524882:android:9ef2dabcbddc703f583abc",
+        "android_client_info": {
+          "package_name": "org.telegram.video.messenger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "708284524882-4jou4b5cakj9tjngehqafvkge1ovhg25.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATR-o_hIpDvqSdwvQX2F14alKBu7ChhUs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "708284524882-4jou4b5cakj9tjngehqafvkge1ovhg25.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708284524882:android:38acabc37cf79f89583abc",
+        "android_client_info": {
+          "package_name": "org.telegram.video.messenger.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "708284524882-4jou4b5cakj9tjngehqafvkge1ovhg25.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATR-o_hIpDvqSdwvQX2F14alKBu7ChhUs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "708284524882-4jou4b5cakj9tjngehqafvkge1ovhg25.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

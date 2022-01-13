@@ -1,0 +1,215 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+static def getDate() {
+    def date = new Date()
+    def formattedDate = date.format('yyyyMMddHHmm')
+    return formattedDate
+}
+
+repositories {
+    mavenCentral()
+    google()
+    jcenter()
+}
+
+configurations {
+    compile.exclude module: 'support-v4'
+}
+
+configurations.all {
+    exclude group: 'com.google.firebase', module: 'firebase-core'
+    exclude group: 'androidx.recyclerview', module: 'recyclerview'
+}
+
+dependencies {
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.1'
+    implementation 'androidx.core:core:1.3.2'
+    implementation 'androidx.palette:palette:1.0.0'
+    implementation 'androidx.exifinterface:exifinterface:1.3.2'
+    implementation 'androidx.dynamicanimation:dynamicanimation:1.0.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation "androidx.sharetarget:sharetarget:1.0.0"
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    compileOnly 'org.checkerframework:checker-qual:2.5.2'
+    compileOnly 'org.checkerframework:checker-compat-qual:2.5.0'
+    implementation 'com.google.firebase:firebase-messaging:21.0.1'
+    implementation 'com.google.firebase:firebase-config:20.0.2'
+    implementation 'com.google.firebase:firebase-datatransport:17.0.10'
+    implementation 'com.google.firebase:firebase-appindexing:19.1.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    implementation 'com.google.android.gms:play-services-vision:16.2.0'
+    implementation 'com.google.android.gms:play-services-wearable:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.1.0'
+    implementation 'com.google.android.gms:play-services-wallet:18.1.2'
+    implementation "com.microsoft.appcenter:appcenter-distribute:3.3.1"
+    implementation "com.microsoft.appcenter:appcenter-crashes:3.3.1"
+    implementation 'com.googlecode.mp4parser:isoparser:1.0.6'
+    implementation 'com.stripe:stripe-android:2.0.2'
+    implementation files('libs/libgsaverification-client.aar')
+
+    //新加的依赖
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.github.hackware1993:MagicIndicator:1.7.0'
+    implementation 'com.scwang.smart:refresh-layout-kernel:2.0.1'//下拉刷新
+    implementation 'com.scwang.smart:refresh-header-material:2.0.1'
+    implementation 'cat.ereza:customactivityoncrash:2.3.0'
+    implementation 'com.makeramen:roundedimageview:2.3.0'//圆角imageview
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'org.greenrobot:eventbus:3.2.0'
+    implementation 'com.jaeger.statusbarutil:library:1.5.1'
+    implementation 'com.google.code.gson:gson:2.8.1'
+    implementation 'com.zhy:okhttputils:2.6.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.8.0'
+    implementation 'com.blankj:utilcodex:1.29.0'
+    implementation 'at.blogc:expandabletextview:1.0.5'
+    implementation 'com.flurry.android:analytics:12.11.0@aar'//统计
+    implementation 'io.paperdb:paperdb:2.7.1'//保存
+    implementation 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-java:v8.1.3-jitpack'
+    implementation 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-armv7a:v8.1.3-jitpack'
+    implementation 'com.airbnb.android:lottie:3.7.0'//动画
+
+    //友盟
+    implementation 'com.umeng.sdk:utdid:1.1.5.3'//友盟utdid唯一id
+    implementation 'com.umeng.umsdk:common:9.3.0' // (必选)版本号
+    implementation 'com.umeng.umsdk:asms:1.1.3' // asms包依赖(必选)
+    implementation 'com.umeng.umsdk:crash:0.0.5' // native crash包依赖(必选)
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion '30.0.3'
+    ndkVersion "21.1.6352462"
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionName "1.0.2"
+        versionCode 102
+        applicationId = "org.telegram.video.messenger"
+
+        vectorDrawables.generatedDensities = ['mdpi', 'hdpi', 'xhdpi', 'xxhdpi']
+        buildConfigField "int", "REGION_AREA", "1"
+
+        manifestPlaceholders = [
+                UMENG_KEY: "xxxxxxxxxxxxxxxxxxxxxxx",
+                UMENG_CHANNEL: "official",
+        ]
+
+        /*externalNativeBuild {
+            cmake {
+                version '3.10.2'
+                arguments '-DANDROID_STL=c++_static', '-DANDROID_PLATFORM=android-16', "-j=16"
+            }
+        }*/
+    }
+
+    sourceSets.main.jniLibs.srcDirs = ['libs']
+    //sourceSets.main.jniLibs.srcDirs = ['./jni/']
+    /*externalNativeBuild {
+        cmake {
+            path 'jni/CMakeLists.txt'
+        }
+    }*/
+
+
+    lintOptions {
+        disable 'MissingTranslation'
+        disable 'ExtraTranslation'
+        disable 'BlockedPrivateApi'
+    }
+
+    dexOptions {
+        jumboMode = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+
+        coreLibraryDesugaringEnabled true
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("config/keystore.jks")
+            storePassword "123456"
+            keyAlias "123456"
+            keyPassword "123456"
+        }
+
+        release {
+            storeFile file("config/keystore.jks")
+            storePassword "123456"
+            keyAlias "123456"
+            keyPassword "123456"
+
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            jniDebuggable true
+            signingConfig signingConfigs.debug
+            applicationIdSuffix ".dev"
+            minifyEnabled false
+            shrinkResources false
+            multiDexEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            ndk.debugSymbolLevel = 'FULL'
+        }
+
+        release {
+            debuggable false
+            jniDebuggable false
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            shrinkResources false
+            multiDexEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            ndk.debugSymbolLevel = 'FULL'
+        }
+    }
+
+    sourceSets.debug {
+        manifest.srcFile 'config/debug/AndroidManifest.xml'
+    }
+
+    sourceSets.release {
+        manifest.srcFile 'config/release/AndroidManifest.xml'
+    }
+
+    flavorDimensions "minApi"
+    productFlavors {
+        official {
+            ndk {
+                abiFilters "armeabi-v7a"
+            }
+            sourceSets.debug {
+                manifest.srcFile 'config/debug/AndroidManifest_SDK23.xml'
+            }
+            sourceSets.release {
+                manifest.srcFile 'config/release/AndroidManifest_SDK23.xml'
+            }
+            manifestPlaceholders = [
+                    UMENG_CHANNEL: "official",
+            ]
+            ext {
+                abiVersionCode = 99
+            }
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = variant.productFlavors[0].name + "_" + variant.buildType.name + '_v' + defaultConfig.versionName + '_' + getDate() + '.apk'
+        }
+    }
+}

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:orientation="horizontal"
+    android:paddingLeft="6dp"
+    android:paddingTop="2dp"
+    android:paddingRight="6dp"
+    android:paddingBottom="0dp">
+
+    <FrameLayout
+        android:id="@+id/fr_cell_layout"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="5dp"></FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:background="@drawable/ic_cell_bg"
+        android:maxWidth="290dp"
+        android:minWidth="200dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="4dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/fl_left"
+                android:layout_width="44dp"
+                android:layout_height="44dp">
+
+                <ImageView
+                    android:id="@+id/iv_centerimg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_file_nostart"></ImageView>
+
+                <ProgressBar
+                    android:id="@+id/loading_view"
+                    style="@style/CustomProgressStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:indeterminateTint="#ffffff" />
+
+                <kk.ui.view.CircleProgressBar
+                    android:id="@+id/circle_progress"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:bga_pb_isCapRounded="true"
+                    app:bga_pb_isHiddenText="true"
+                    app:bga_pb_mode="circle"
+                    app:bga_pb_radius="20dp"
+                    app:bga_pb_reachedColor="#ffffff"
+                    app:bga_pb_reachedHeight="4dp"
+                    app:bga_pb_unReachedColor="#20ffffff"
+                    app:bga_pb_unReachedHeight="4dp"></kk.ui.view.CircleProgressBar>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:textColor="#4E9AD4"
+                    android:textSize="16sp"
+                    tools:text="这是文件标题"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#A1A9B3"
+                    android:textSize="12sp"
+                    tools:text="213.MB MKV"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="3dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textColor="#4E9AD4"
+                    android:textSize="12sp"
+                    tools:text="来自："></TextView>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#B0B4B9"
+                android:textSize="12sp"
+                tools:text="01月20"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="4dp"
+        android:src="@drawable/ic_video_delete2"></ImageView>
+
+</LinearLayout>

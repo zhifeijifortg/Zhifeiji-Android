@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingTop="15dp"
+    android:paddingRight="58dp"
+    android:paddingBottom="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_white_stroke_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="156dp">
+
+            <FrameLayout
+                android:id="@+id/image_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_black_corner_bg2"></FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_cover_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/ic_shadow_bg2"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp">
+
+                <TextView
+                    android:id="@+id/tv_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:textColor="#ffffff"
+                    android:textSize="13sp"
+                    tools:text="0M"></TextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_weight="1"></View>
+
+                <TextView
+                    android:id="@+id/tv_length"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_black_corner_bg"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="3dp"
+                    android:paddingTop="1dp"
+                    android:paddingRight="3dp"
+                    android:paddingBottom="1dp"
+                    android:textColor="#ffffff"
+                    android:textSize="13sp"
+                    tools:text="00:20"></TextView>
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_center"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/iv_centerimg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_item_play"></ImageView>
+
+                <ProgressBar
+                    android:id="@+id/loading_view"
+                    style="@style/CustomProgressStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:indeterminateTint="#ffffff" />
+
+                <kk.ui.view.CircleProgressBar
+                    android:id="@+id/circle_progress"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:bga_pb_isCapRounded="true"
+                    app:bga_pb_isHiddenText="true"
+                    app:bga_pb_mode="circle"
+                    app:bga_pb_radius="24dp"
+                    app:bga_pb_reachedColor="#ffffff"
+                    app:bga_pb_reachedHeight="4dp"
+                    app:bga_pb_unReachedColor="#30ffffff"
+                    app:bga_pb_unReachedHeight="4dp"></kk.ui.view.CircleProgressBar>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_download_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fl_center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:textColor="#ffffff"
+                android:textSize="13sp"
+                tools:text="2.1M/45M"></TextView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <at.blogc.android.views.ExpandableTextView
+                android:id="@+id/expandableTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="#b0000000"
+                android:textSize="14sp"
+                app:animation_duration="500" />
+
+            <TextView
+                android:id="@+id/tv_expand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="@string/fg_textview_expand"
+                android:textColor="#69B1F2"
+                android:textSize="14sp"></TextView>
+
+            <TextView
+                android:id="@+id/tv_from"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:textColor="#61000000"
+                android:textSize="13sp"
+                tools:text="来自："></TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_grey_corner_bg"
+            android:paddingLeft="3dp"
+            android:paddingTop="1dp"
+            android:paddingRight="3dp"
+            android:paddingBottom="1dp"
+            android:textColor="#4d000000"
+            android:textSize="12sp"
+            tools:text="01月20"></TextView>
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:src="@drawable/ic_item_delete"></ImageView>
+
+        <ImageView
+            android:id="@+id/iv_colloct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:src="@drawable/ic_collect"
+            android:visibility="invisible"></ImageView>
+    </LinearLayout>
+
+</LinearLayout>
